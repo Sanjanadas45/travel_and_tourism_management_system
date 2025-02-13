@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Before & After pseudo selector</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+    }
+
+    header::before{
+      background-image: url(artur-aldyrkhanov-u159a2eL6UE-unsplash.jpg) /*no-repeat center center/cover*/;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.4; /*It is to make the bg picture a little darker to keep main focus on the text*/
+    }
+
+    .navigation {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 20px;
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+      padding: 20px 20px;
+    }
+
+    section {
+      height: 344px;
+      align-items: center;
+      margin: 3px 23px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      text-align: center;
+    }
+    
+    /* section::before{
+        content: "this is a content";
+    } */
+  </style>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navigation">
+          <li class="item1">Home</li>
+          <li class="item2">About</li>
+          <li class="item3">Services</li>
+          <li class="item4">Contact Us</li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h1>Welcome to Coding World</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat optio
+        atque, nihil quae sit ab. Repudiandae, quis debitis officia soluta
+        facere quae veniam? Natus cum exercitationem magnam ducimus at saepe,
+        quae eius repudiandae quia et, quidem reprehenderit? Nemo aut natus
+        voluptates at aliquam possimus tempora facere id, quidem, adipisci sunt.</p>
+    </section>
+  </body>
+</html>

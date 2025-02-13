@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyFrames & Animations</title>
+</head>
+<style>
+    .container{
+        background-color: greenyellow;
+    }
+    .box{
+        background-color: green;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        /* animation-name: sanjana1; */
+        animation-name: sanjana2;
+        animation-duration: 8s;
+        animation-iteration-count: 1;
+        /* animation-fill-mode: alternate; */
+        /* animation-timing-function: ease-in; */
+        /* animation-delay: 3s; */
+        /* animation-direction: reverse; */
+
+        /* These properties can be set using this shorthand */
+        /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count
+        aniamtion-fill-mode; */
+        animation: sanjana 5s ease-in 1s 12 backwards;
+    }
+
+    @keyframes sanjana2 {
+        0%{
+            top: 0px;
+            left: 0px;
+        }
+        25%{
+            top: 250px;
+            left: 0px;
+        }
+        75%{
+            top: 250px;
+            left: 250px;
+        }
+        100%{
+            top: 0px;
+            left: 250px;
+        }
+    }
+@keyframes sanjana1{
+    from{
+        width: 200px;
+    }
+    to{
+        width: 1400px;
+    }
+
+}
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a Box
+        </div>
+    </div>
+</body>
+</html>

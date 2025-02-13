@@ -1,0 +1,5 @@
+/* syntax of css - p { color:blue;} */
+p{
+    color: greenyellow;
+    background-color: seagreen !important;  
+}
